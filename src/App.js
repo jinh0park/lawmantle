@@ -79,6 +79,7 @@ function App() {
               backgroundColor: "ghostwhite",
             }}
           >
+            {/*  */}
             <LawDetail lawId={selectedNearLaw.current}></LawDetail>
           </Paper>
         </Grid>
