@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/lawmantle/static/css/main.b0a98c05.css",
-    "main.js": "/lawmantle/static/js/main.a3683ecd.js",
+    "main.js": "/lawmantle/static/js/main.c235e650.js",
     "static/js/453.a8eab00b.chunk.js": "/lawmantle/static/js/453.a8eab00b.chunk.js",
     "index.html": "/lawmantle/index.html",
     "main.b0a98c05.css.map": "/lawmantle/static/css/main.b0a98c05.css.map",
-    "main.a3683ecd.js.map": "/lawmantle/static/js/main.a3683ecd.js.map",
+    "main.c235e650.js.map": "/lawmantle/static/js/main.c235e650.js.map",
     "453.a8eab00b.chunk.js.map": "/lawmantle/static/js/453.a8eab00b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b0a98c05.css",
-    "static/js/main.a3683ecd.js"
+    "static/js/main.c235e650.js"
   ]
 }
