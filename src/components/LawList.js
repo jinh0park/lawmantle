@@ -28,7 +28,7 @@ function LawList({ laws, setLaws, onSelect }) {
 
   if (loading) return <div></div>;
   if (error) return <div>에러가 발생했습니다</div>;
-  if (!laws) return null;
+  if (!laws) return <div>법률을 선택해주세요.</div>;
 
   return (
     <List>

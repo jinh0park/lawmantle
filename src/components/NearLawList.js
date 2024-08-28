@@ -5,6 +5,7 @@ import Law from "./Law";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
+import Box from "@mui/material/Box";
 
 function NearLawList({ nearLaws, setNearLaws, lawId, onSelect }) {
   const [loading, setLoading] = useState(false);
@@ -28,7 +29,17 @@ function NearLawList({ nearLaws, setNearLaws, lawId, onSelect }) {
 
     fetchLaws();
   }, [setNearLaws, lawId]);
-
+  if (!lawId)
+    return (
+      <Box
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        minHeight="100%"
+      >
+        법률을 선택해주세요.
+      </Box>
+    );
   if (loading)
     return (
       <List>

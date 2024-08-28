@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ReactMarkdown from "react-markdown";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
 
 function LawDetail({ lawId }) {
   const [loading, setLoading] = useState(false);
@@ -27,11 +29,28 @@ function LawDetail({ lawId }) {
     fetchLawDetail();
   }, [setLawDetail, lawId]);
 
+  if (!lawId)
+    return (
+      <Box
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        minHeight="100%"
+      >
+        법률을 선택해주세요.
+      </Box>
+    );
   if (loading) return null;
   if (error) return null;
   if (!lawDetail) return null;
 
-  return <ReactMarkdown>{lawDetail.content}</ReactMarkdown>;
+  return (
+    <div style={{ fontSize: "0.8rem", "& > ul": { paddingLeft: 0 } }}>
+      <Container maxWidth="xl">
+        <ReactMarkdown>{lawDetail.content}</ReactMarkdown>
+      </Container>
+    </div>
+  );
 }
 
 // https://www.law.go.kr/DRF/lawService.do?OC=jinh0park&target=law&ID=1234&type=HTML

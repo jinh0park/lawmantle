@@ -51,7 +51,13 @@ function App() {
           </Paper>
         </Grid>
         <Grid item md={3}>
-          <Paper style={{ height: "96vh", overflow: "auto" }}>
+          <Paper
+            style={{
+              height: "96vh",
+              overflow: "auto",
+              backgroundColor: "ghostwhite",
+            }}
+          >
             <NearLawList
               nearLaws={nearLaws}
               setNearLaws={setNearLaws}
@@ -60,21 +66,23 @@ function App() {
             ></NearLawList>
           </Paper>
         </Grid>
-        <Grid item md={6}>
-          <Paper style={{ height: "47vh", overflow: "auto" }}>
-            <Container maxWidth="xl">
-              <LawDetail lawId={selectedLaw.current}></LawDetail>
-            </Container>
+        <Grid item md={3}>
+          <Paper style={{ height: "96vh", overflow: "auto" }}>
+            <LawDetail lawId={selectedLaw.current}></LawDetail>
           </Paper>
-          <div style={{ height: "2vh" }}></div>
-          <Paper style={{ height: "47vh", overflow: "auto" }}>
-            <Container maxWidth="xl">
-              <LawDetail lawId={selectedNearLaw.current}></LawDetail>
-            </Container>
+        </Grid>
+        <Grid item md={3}>
+          <Paper
+            style={{
+              height: "96vh",
+              overflow: "auto",
+              backgroundColor: "ghostwhite",
+            }}
+          >
+            <LawDetail lawId={selectedNearLaw.current}></LawDetail>
           </Paper>
         </Grid>
       </Grid>
-      <div style={{ height: "2vh" }}></div>
     </Container>
   );
 }
